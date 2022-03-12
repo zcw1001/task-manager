@@ -35,8 +35,8 @@ const delete_callback = () => {
             <TaskTypes :options="options" :select="selectCallback" :default-select="task.priority" />
         </div>
         <div id="action-container">
-            <Button :action="edit_callback" name="编辑任务" type="normal" />
-            <Button :action="delete_callback" name="删除任务" type="important" />
+            <Button :action="edit_callback" name="确定" type="normal" />
+            <Button :action="delete_callback" name="删除" type="important" />
         </div>
     </form>
 </template>
@@ -47,7 +47,7 @@ const delete_callback = () => {
 }
 #action-container {
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     left: 0;
     align-self: flex-end;
     display: flex;

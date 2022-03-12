@@ -28,7 +28,7 @@ const add_callback = () => {
             <TaskTypes :options="options" :select="selectCallback" :default-select="0" />
         </div>
         <div id="action-container">
-            <Button :action="add_callback" name="添加任务" type="normal" />
+            <Button :action="add_callback" name="添加" type="normal" />
         </div>
     </form>
 </template>

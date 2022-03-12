@@ -2,12 +2,12 @@
 </script>
 
 <template>
-    <div id="button" @click="$router.push({name: 'add'})">添加</div>
+    <div id="button" @click="$router.push({name: 'add'})">添加任务</div>
 </template>
 
 <style scoped>
 #button {
-    width: 100px;
+    width: 120px;
     height: 40px;
     line-height: 40px;
     box-sizing: border-box;

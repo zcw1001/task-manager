@@ -4,6 +4,7 @@ import Header from './Header.vue'
 import Task from './Task.vue'
 import Options from '../common/Options.vue'
 import AddButton from './AddButton.vue'
+import NoTask from './NoTask.vue'
 import useFilteredTasks from './useFilteredTasks'
 
 const options = reactive(['全部', '未完成', '已完成'])
@@ -20,6 +21,7 @@ const {tasks, filter} = useFilteredTasks()
         </div>
         <div id="task-list">
             <Task v-for="(task, i) in tasks" :task="task" :key="task.name" />
+            <NoTask v-show="!tasks.length" />
         </div>
         <div id="action-container">
             <AddButton />

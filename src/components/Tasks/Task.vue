@@ -106,4 +106,13 @@ const toggleCompleted = () => {
     content: '✓';
     color: white;
 }
+
+@media only screen and (max-width: 400px) {
+    .status:hover {
+        background-color: transparent;
+    }
+    .status:hover::before {
+        content: '';
+    }
+}
 </style>

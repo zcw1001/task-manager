@@ -59,7 +59,5 @@ const {tasks, filter} = useFilteredTasks()
     width: 100%;
     height: 70px;
     z-index: 100;
-
-    background-image: linear-gradient(to bottom, transparent 15%, white 75%);
 }
 </style>

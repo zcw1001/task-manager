@@ -49,11 +49,14 @@ const delete_callback = () => {
     position: absolute;
     bottom: 0;
     left: 0;
+    align-self: flex-end;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100px;
+    box-sizing: border-box;
+    padding: 0 40px;
 }
 </style>

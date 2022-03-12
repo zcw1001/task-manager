@@ -46,5 +46,7 @@ const add_callback = () => {
     align-items: center;
     width: 100%;
     height: 70px;
+    box-sizing: border-box;
+    padding: 0 40px;
 }
 </style>

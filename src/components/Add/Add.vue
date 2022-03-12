@@ -52,7 +52,10 @@ const add_callback = () => {
 
 @media only screen and (max-width: 400px) {
     #header {
-        padding: 30px 0 30px 0;
+        padding: 30px 0;
+    }
+    #action-container {
+        padding: 0 20px;
     }
 }
 </style>

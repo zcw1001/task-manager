@@ -60,4 +60,10 @@ const {tasks, filter} = useFilteredTasks()
     height: 70px;
     z-index: 100;
 }
+
+@media only screen and (max-width: 400px) {
+    #header {
+        padding: 30px 0 30px 0;
+    }
+}
 </style>

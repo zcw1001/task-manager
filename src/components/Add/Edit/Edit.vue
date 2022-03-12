@@ -59,4 +59,10 @@ const delete_callback = () => {
     box-sizing: border-box;
     padding: 0 40px;
 }
+
+@media only screen and (max-width: 400px) {
+    #header {
+        padding: 30px 0 30px 0;
+    }
+}
 </style>

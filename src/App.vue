@@ -44,6 +44,7 @@ main {
     height: var(--height);
     box-sizing: border-box;
     padding: 0 40px;
+    overflow: hidden;
 
     background-color: white;
 }

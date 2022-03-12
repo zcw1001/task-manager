@@ -10,6 +10,7 @@
 <style>
 :root {
     --width: 400px;
+    --height: 100vh;
 
     --black: #141414;
     --red: #ff4d4f;
@@ -28,7 +29,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: var(--height);
     box-sizing: border-box;
 
     background-color: #f0f0f0;
@@ -40,11 +41,16 @@ main {
 .app-container {
     position: relative;
     width: var(--width);
-    height: 100vh;
+    height: var(--height);
     box-sizing: border-box;
     padding: 0 40px;
 
     background-color: white;
 }
 
+@media only screen and (max-width: 400px) {
+    .app-container {
+        padding: 0 20px;
+    }
+}
 </style>

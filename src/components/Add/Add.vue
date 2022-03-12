@@ -40,8 +40,11 @@ const add_callback = () => {
 #action-container {
     position: absolute;
     bottom: 0;
+    left: 0;
     display: flex;
-    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     height: 70px;
 }
 </style>

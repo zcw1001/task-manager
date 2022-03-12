@@ -1,5 +1,4 @@
 <script setup>
-
 </script>
 
 <template>
@@ -8,9 +7,6 @@
 
 <style scoped>
 #button {
-    position: absolute;
-    bottom: 30px;
-    left: 150px;
     width: 100px;
     height: 40px;
     line-height: 40px;

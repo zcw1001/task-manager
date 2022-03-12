@@ -21,7 +21,7 @@ const {tasks, filter} = useFilteredTasks()
         <div id="task-list">
             <Task v-for="(task, i) in tasks" :task="task" :key="task.name" />
         </div>
-        <div id="add-container">
+        <div id="action-container">
             <AddButton />
         </div>
     </div>
@@ -49,12 +49,15 @@ const {tasks, filter} = useFilteredTasks()
 #task-list::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
 }
-#add-container {
+#action-container {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 400px;
-    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
     z-index: 100;
 
     background-image: linear-gradient(to bottom, transparent 15%, white 75%);

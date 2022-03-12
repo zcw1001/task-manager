@@ -38,7 +38,7 @@ const {tasks, filter} = useFilteredTasks()
     display: flex;
     flex-flow: row wrap;
     align-content: flex-start;
-    height: calc(100vh - 173px);
+    height: calc(100vh - 153px);
     box-sizing: border-box;
     padding-bottom: 40px;
     overflow-y: scroll;
@@ -63,7 +63,7 @@ const {tasks, filter} = useFilteredTasks()
 
 @media only screen and (max-width: 400px) {
     #header {
-        padding: 30px 0 30px 0;
+        padding: 30px 0;
     }
 }
 </style>

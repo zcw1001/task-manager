@@ -87,16 +87,6 @@ const toggleCompleted = () => {
     cursor: pointer;
     transition: all 0.3s;
 }
-
-.status:hover {
-    background-color: var(--black);
-}
-.status:hover::before {
-    position: relative;
-    left: 2px;
-    content: '✓';
-    color: white;
-}
 .completed {
     background-color: var(--black);
 }
@@ -107,12 +97,15 @@ const toggleCompleted = () => {
     color: white;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (min-width: 500px) {
     .status:hover {
-        background-color: transparent;
+        background-color: var(--black);
     }
     .status:hover::before {
-        content: '';
+        position: relative;
+        left: 2px;
+        content: '✓';
+        color: white;
     }
 }
 </style>

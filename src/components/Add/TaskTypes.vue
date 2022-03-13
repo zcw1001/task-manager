@@ -1,7 +1,11 @@
 <script setup>
 import Options from '../common/Options.vue'
 
-const {options, select, defaultSelect} = defineProps(['options', 'select', 'default-select'])
+const {options, select, defaultSelect} = defineProps({
+    select: Function,
+    options: Array,
+    defaultSelect: Number
+})
 </script>
 
 <template>

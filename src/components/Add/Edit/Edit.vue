@@ -14,6 +14,7 @@ const options = reactive(['一般', '重要', '紧急'])
 const {task, selectCallback, updateTask, deleteTask} = useEditTask(id)
 
 const edit_callback = () => {
+    // form validation
     if (task.name) {
         updateTask()
         router.push({name: 'tasks'})
@@ -28,7 +29,7 @@ const delete_callback = () => {
 <template>
     <form class="app-container">
         <div id="header">
-            <Header name="编辑任务" />
+            <Header title="编辑任务" />
         </div>
         <div id="fields">
             <TextField name="任务名称" :task="task" />

@@ -11,6 +11,7 @@ const options = reactive(['一般', '重要', '紧急'])
 const {task, selectCallback, addTask} = useAddTask()
 const router = useRouter()
 const add_callback = () => {
+    // form validation
     if (task.name) {
         addTask()
         router.push({name: 'tasks'})
@@ -21,7 +22,7 @@ const add_callback = () => {
 <template>
     <form class="app-container">
         <div id="header">
-            <Header name="添加任务" />
+            <Header title="添加任务" />
         </div>
         <div id="fields">
             <TextField name="任务名称" :task="task" />

@@ -1,11 +1,13 @@
 <script setup>
-const {name} = defineProps(['name'])
+const {title} = defineProps({
+    title: String
+})
 </script>
 
 <template>
     <div id="title">
         <span id="left-arrow" @click="$router.push({name: 'tasks'})">←</span>
-        <span>{{ name }}</span>
+        <span>{{ title }}</span>
     </div>
 </template>
 

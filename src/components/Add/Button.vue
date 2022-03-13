@@ -1,7 +1,11 @@
 <script setup>
 import { reactive } from 'vue';
 
-const {action, name, type} = defineProps(['action', 'name', 'type'])
+const {action, name, type} = defineProps({
+    action: Function,
+    name: String,
+    type: String
+})
 let color_classes = reactive([])
 if (type == 'normal') {
     color_classes.push('normal')

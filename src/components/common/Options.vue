@@ -1,7 +1,11 @@
 <script setup>
 import {ref, watchEffect} from 'vue'
 
-const {select, options, defaultSelect} = defineProps(['select', 'options', 'default-select'])
+const {select, options, defaultSelect} = defineProps({
+    select: Function,
+    options: Array,
+    defaultSelect: Number
+})
 const selected = ref(parseInt(defaultSelect))
 watchEffect(() => {
     select(selected.value)

@@ -1,5 +1,8 @@
 <script setup>
-const {name, task} = defineProps(['name', 'task'])
+const {name, task} = defineProps({
+    name: String,
+    task: Object
+})
 </script>
 
 <template>

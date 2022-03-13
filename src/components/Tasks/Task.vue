@@ -12,15 +12,7 @@ const priority = computed(() => {
         return '紧急'
     }
 })
-const color_class = computed(() => {
-    if (task.priority == 0) {
-        return ['low']
-    } else if (task.priority == 1) {
-        return ['mid']
-    } else {
-        return ['high']
-    }
-})
+const color_class = ['low', 'mid', 'high'][task.priority]
 const toggleCompleted = () => {
     task.completed = !task.completed
     editTask(task.id, task)
@@ -51,15 +43,6 @@ const toggleCompleted = () => {
 
     font-weight: bold;
     cursor: pointer;
-}
-.high {
-    background-color: var(--yellow);
-}
-.mid {
-    background-color: var(--blue);
-}
-.low {
-    background-color: var(--cyan);
 }
 .task-title {
     padding: 15px 0;
@@ -95,6 +78,15 @@ const toggleCompleted = () => {
     left: 2px;
     content: '✓';
     color: white;
+}
+.high {
+    background-color: var(--yellow);
+}
+.mid {
+    background-color: var(--blue);
+}
+.low {
+    background-color: var(--cyan);
 }
 
 @media only screen and (min-width: 500px) {

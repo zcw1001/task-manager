@@ -17,6 +17,7 @@ if (type == 'normal') {
 <template>
     <input type="submit"
         id="button" 
+        class="button"
         :class="color_classes"
         :value="name"
         @click="action"
@@ -29,23 +30,13 @@ if (type == 'normal') {
     height: 40px;
     line-height: 40px;
     padding: 0;
-    box-sizing: border-box;
-    border-radius: 30px;
     border: none;
     outline: none;
-
-    text-align: center;
-    color: white;
-    cursor: pointer;
-    transition: all 0.5s;
 }
 .normal {
     background-color: var(--black);
 }
 .important {
     background-color: var(--red);
-}
-#button:hover {
-    opacity: 0.7;
 }
 </style>

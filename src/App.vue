@@ -8,6 +8,7 @@
 </template>
 
 <style>
+/* global */
 :root {
     --width: 400px;
     --height: 100vh;
@@ -25,6 +26,7 @@ body, html {
   'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
   'Noto Color Emoji';
 }
+
 main {
     display: flex;
     justify-content: center;
@@ -37,7 +39,7 @@ main {
     background-size: cover;
 }
 
-
+/* app-container */
 .app-container {
     position: relative;
     width: var(--width);
@@ -52,6 +54,23 @@ main {
 @media only screen and (max-width: 400px) {
     .app-container {
         padding: 0 20px;
+    }
+}
+
+/* button */
+.button {
+    box-sizing: border-box;
+    border-radius: 30px;
+
+    text-align: center;
+    background-color: var(--black);
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+@media only screen and (min-width: 500px) {
+    .button:hover {
+        opacity: 0.7;
     }
 }
 </style>

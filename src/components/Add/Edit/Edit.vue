@@ -28,10 +28,10 @@ const delete_callback = () => {
 
 <template>
     <form class="app-container">
-        <div id="header">
+        <div id="header-container">
             <Header title="编辑任务" />
         </div>
-        <div id="fields">
+        <div id="fields-container">
             <TextField name="任务名称" :task="task" />
             <TaskTypes :options="options" :select="selectCallback" :default-select="task.priority" />
         </div>
@@ -43,7 +43,7 @@ const delete_callback = () => {
 </template>
 
 <style scoped>
-#header {
+#header-container {
     padding: 50px 0 30px 0;
 }
 #action-container {

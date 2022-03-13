@@ -13,13 +13,13 @@ const {tasks, filter} = useFilteredTasks()
 
 <template>
     <div class="app-container">
-        <div id="header">
+        <div id="header-container">
             <Header />
         </div>
-        <div id="options">
+        <div id="options-container">
             <Options :options="options" :select="filter" :default-select="0" />
         </div>
-        <div id="task-list">
+        <div id="task-list-container">
             <Task v-for="(task, i) in tasks" :task="task" :key="task.name" />
             <NoTask v-show="!tasks.length" />
         </div>
@@ -29,27 +29,33 @@ const {tasks, filter} = useFilteredTasks()
     </div>
 </template>
 
-<style scoped>
-#header {
-    padding: 50px 0 30px 0;
-}
-#options {
-    padding-bottom: 20px;
-}
-#task-list {
-    display: flex;
-    flex-flow: row wrap;
-    align-content: flex-start;
-    height: calc(100vh - 153px);
-    box-sizing: border-box;
-    padding-bottom: 40px;
-    overflow-y: scroll;
+<style scoped lang="scss">
+@mixin hideScollBar {
     -ms-overflow-style: none;  /* IE */
     scrollbar-width: none;  /* Firefox */
     overflow: -moz-scrollbars-none; /* older Firefox */
+    &::-webkit-scrollbar { 
+        display: none;  /* hide scrollbar for Safari and Chrome */
+    }
 }
-#task-list::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
+$task-list-height: calc(100vh - 153px);
+
+#header-container {
+    padding: 50px 0 30px 0;
+}
+#options-container {
+    padding-bottom: 20px;
+}
+#task-list-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    height: $task-list-height;
+    box-sizing: border-box;
+    padding-bottom: 40px;
+
+    overflow-y: scroll;
+    @include hideScollBar()
 }
 #action-container {
     position: absolute;

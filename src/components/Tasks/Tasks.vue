@@ -70,7 +70,7 @@ $task-list-height: calc(100vh - 153px);
 }
 
 @media only screen and (max-width: 400px) {
-    #header {
+    #header-container {
         padding: 30px 0;
     }
 }

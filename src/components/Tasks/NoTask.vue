@@ -3,7 +3,7 @@
 
 <template>
     <div id="no-task">
-        没有内容
+        没有任务
     </div>
 </template>
 

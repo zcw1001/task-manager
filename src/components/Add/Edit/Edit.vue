@@ -50,7 +50,6 @@ const delete_callback = () => {
     position: absolute;
     bottom: 10px;
     left: 0;
-    align-self: flex-end;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;

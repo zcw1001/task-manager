@@ -1,5 +1,5 @@
 import {reactive} from 'vue'
-import {addTask as addTaskAPI} from '../../apis/tasks'
+import {addTask as addTaskAPI} from '@/apis/tasks.js'
 
 export default function useAddTask() {
     const task = reactive({

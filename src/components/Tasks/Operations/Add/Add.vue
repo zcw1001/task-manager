@@ -1,10 +1,10 @@
 <script setup>
 import { reactive } from 'vue'
 import {useRouter} from 'vue-router'
-import Header from './Header.vue'
-import TextField from './TextField.vue'
-import TaskTypes from './TaskTypes.vue'
-import Button from './Button.vue'
+import Header from '../Header.vue'
+import TextField from '../TextField.vue'
+import TaskTypes from '../TaskTypes.vue'
+import Button from '../Button.vue'
 import useAddTask from './useAddTask'
 
 const options = reactive(['一般', '重要', '紧急'])

@@ -42,30 +42,14 @@ const delete_callback = () => {
     </form>
 </template>
 
-<style scoped>
-#header-container {
-    padding: 50px 0 30px 0;
-}
+<style scoped lang="scss">
+@use '../common';
+
 #action-container {
-    position: absolute;
     bottom: 10px;
     left: 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
     width: 100%;
     height: 100px;
-    box-sizing: border-box;
-    padding: 0 40px;
-}
-
-@media only screen and (max-width: 400px) {
-    #header {
-        padding: 30px 0;
-    }
-    #action-container {
-        padding: 0 20px;
-    }
 }
 </style>

@@ -1,5 +1,6 @@
 <script setup>
 import {reactive} from 'vue'
+import {getDefaultFilter} from '@/apis/tasks'
 import Header from './Header.vue'
 import Task from './Task.vue'
 import Options from '@/components/common/Options.vue'
@@ -7,6 +8,7 @@ import AddButton from './AddButton.vue'
 import NoTask from './NoTask.vue'
 import useFilteredTasks from './useFilteredTasks'
 
+const defaultFilter = getDefaultFilter();
 const options = reactive(['全部', '未完成', '已完成'])
 const {tasks, filter} = useFilteredTasks()
 </script>
@@ -17,7 +19,7 @@ const {tasks, filter} = useFilteredTasks()
             <Header />
         </div>
         <div id="options-container">
-            <Options :options="options" :select="filter" :default-select="0" />
+            <Options :options="options" :select="filter" :default-select="defaultFilter" />
         </div>
         <div id="task-list-container">
             <Task v-for="(task, i) in tasks" :task="task" :key="task.name" />

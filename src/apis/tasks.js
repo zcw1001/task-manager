@@ -1,6 +1,7 @@
 const storage = window.localStorage;
 const TASKS = 'tasks'
 const ID = 'id'
+const FILTER = 'defaultFilter'
 
 function getID() {
     const id = parseInt(storage.getItem(ID))
@@ -10,6 +11,20 @@ function getID() {
     } else {
         storage.setItem(ID, 1)
         return 1
+    }
+}
+
+export function editDefaultFilter(newFilter) {
+    storage.setItem(FILTER, newFilter)
+}
+
+export function getDefaultFilter() {
+    const filter = storage.getItem(FILTER)
+    if (filter) {
+        return parseInt(filter)
+    } else {
+        storage.setItem(FILTER, 0)
+        return 0
     }
 }
 

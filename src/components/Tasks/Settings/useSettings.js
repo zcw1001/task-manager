@@ -1,18 +1,24 @@
-import {reactive} from 'vue'
+import {ref} from 'vue'
+import {useStore} from 'vuex'
+import {getDefaultFilter} from '@/apis/tasks'
 
 export default function useSettings() {
-    const settings = reactive({
-        filterChoice: 0
-    })
-    const selectCallback = (idx) => {
-        settings.filterChoice = idx
+    const store = useStore()
+    const defaultFilter = ref(getDefaultFilter())
+    const selectFilterCallback = (idx) => {
+        defaultFilter.value = idx
     }
-    const saveCallback = (idx) => {
-        settings.filterChoice = idx
+    const selectStorageCallback = () => {
+        return
+    }
+    const saveSettings = () => {
+        store.dispatch('updateDefaultFilter', {newFilter: defaultFilter.value})
     }
 
     return {
-        selectCallback,
-        saveCallback
+        defaultFilter,
+        selectFilterCallback,
+        selectStorageCallback,
+        saveSettings
     }
 }

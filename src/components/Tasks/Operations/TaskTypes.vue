@@ -1,5 +1,5 @@
 <script setup>
-import Options from '../common/Options.vue'
+import Options from '@/components/common/Options.vue'
 
 const {options, select, defaultSelect} = defineProps({
     select: Function,

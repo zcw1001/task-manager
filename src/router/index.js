@@ -2,6 +2,7 @@ import {createRouter, createWebHistory} from 'vue-router'
 import Tasks from '../components/Tasks/Tasks.vue'
 import Add from '../components/Tasks/Operations/Add/Add.vue'
 import Edit from '../components/Tasks/Operations/Edit/Edit.vue'
+import Settings from '../components/Settings/Settings.vue'
 
 const routes = [
     {
@@ -14,7 +15,7 @@ const routes = [
     },
     {
         name: 'add',
-        path: '/add/',
+        path: '/tasks/add',
         component: Add,
         meta: {
             title: '添加任务 - 任务管理工具'
@@ -22,10 +23,18 @@ const routes = [
     },
     {
         name: 'edit',
-        path: '/edit/:id',
+        path: '/tasks/:id/edit',
         component: Edit,
         meta: {
             title: '编辑任务 - 任务管理工具'
+        }
+    },
+    {
+        name: 'settings',
+        path: '/settings',
+        component: Settings,
+        meta: {
+            title: '设置 - 任务管理工具'
         }
     }
 ]

@@ -3,7 +3,7 @@ import { reactive } from 'vue'
 import {useRouter} from 'vue-router'
 import Header from '../Header.vue'
 import TextField from '../TextField.vue'
-import TaskTypes from '../TaskTypes.vue'
+import TypeField from '../TypeField.vue'
 import Button from '../Button.vue'
 import useAddTask from './useAddTask'
 
@@ -26,7 +26,11 @@ const add_callback = () => {
         </div>
         <div id="fields-container">
             <TextField name="任务名称" :task="task" />
-            <TaskTypes :options="options" :select="selectCallback" :default-select="0" />
+            <TypeField :options="options" 
+                :select="selectCallback" 
+                :default-select="0" 
+                title="任务类型"
+            />
         </div>
         <div id="action-container">
             <Button :action="add_callback" name="添加" type="normal" />

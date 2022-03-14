@@ -1,7 +1,8 @@
 <script setup>
 import Options from '@/components/common/Options.vue'
 
-const {options, select, defaultSelect} = defineProps({
+const {title, options, select, defaultSelect} = defineProps({
+    title: String,
     select: Function,
     options: Array,
     defaultSelect: Number
@@ -10,7 +11,7 @@ const {options, select, defaultSelect} = defineProps({
 
 <template>
     <div class="field">
-        <div id="label-container"><label for="">任务类型</label></div>
+        <div id="label-container"><label for="">{{ title }}</label></div>
         <Options :options="options" :select="select" :default-select="defaultSelect" />
     </div>
 </template>

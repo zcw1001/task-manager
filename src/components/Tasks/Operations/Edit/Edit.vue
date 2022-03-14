@@ -3,7 +3,7 @@ import { reactive } from 'vue'
 import {useRoute, useRouter} from 'vue-router'
 import Header from '../Header.vue'
 import TextField from '../TextField.vue'
-import TaskTypes from '../TaskTypes.vue'
+import TypeField from '../TypeField.vue'
 import Button from '../Button.vue'
 import useEditTask from './useEditTask'
 
@@ -33,7 +33,11 @@ const delete_callback = () => {
         </div>
         <div id="fields-container">
             <TextField name="任务名称" :task="task" />
-            <TaskTypes :options="options" :select="selectCallback" :default-select="task.priority" />
+            <TypeField :options="options" 
+                :select="selectCallback" 
+                :default-select="task.priority" 
+                title="任务类型"
+            />
         </div>
         <div id="action-container">
             <Button :action="edit_callback" name="确定" type="normal" />

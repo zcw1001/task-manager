@@ -31,6 +31,7 @@ watchEffect(() => {
     text-align: center;
     cursor: pointer;
     transition: all 0.5s;
+    user-select: none;
 }
 .option:hover {
     background-color: var(--black);

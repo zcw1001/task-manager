@@ -63,6 +63,7 @@ main {
     border-radius: 30px;
 
     text-align: center;
+    user-select: none;
     background-color: var(--black);
     color: white;
     cursor: pointer;

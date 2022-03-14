@@ -14,7 +14,7 @@
     right: 40px;
 }
 @mixin mobilePosition {
-    top: 35px;
+    top: 34px;
     right: 20px;
 }
 

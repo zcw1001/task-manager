@@ -1,8 +1,8 @@
 import {createRouter, createWebHistory} from 'vue-router'
-import Tasks from '../components/Tasks/Tasks.vue'
-import Add from '../components/Tasks/Operations/Add/Add.vue'
-import Edit from '../components/Tasks/Operations/Edit/Edit.vue'
-import Settings from '../components/Settings/Settings.vue'
+import Tasks from '@/components/Tasks/Tasks.vue'
+import Add from '@/components/Tasks/Operations/Add/Add.vue'
+import Edit from '@/components/Tasks/Operations/Edit/Edit.vue'
+import Settings from '@/components/Tasks/Settings/Settings.vue'
 
 const routes = [
     {

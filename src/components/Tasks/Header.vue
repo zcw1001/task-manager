@@ -10,11 +10,11 @@
 
 <style scoped lang="scss">
 @mixin desktopPosition {
-    top: 56px;
+    top: 55px;
     right: 40px;
 }
 @mixin mobilePosition {
-    top: 36px;
+    top: 35px;
     right: 20px;
 }
 
@@ -25,8 +25,8 @@
 #setting {
     position: absolute;
     @include desktopPosition;
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
 
     cursor: pointer;
 }

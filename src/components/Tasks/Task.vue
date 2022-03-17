@@ -3,16 +3,8 @@ import {computed} from 'vue'
 import {editTask} from '../../apis/tasks'
 
 const {task} = defineProps(['task'])
-const priority = computed(() => {
-    if (task.priority == 0) {
-        return '一般'
-    } else if (task.priority == 1) {
-        return '重要'
-    } else {
-        return '紧急'
-    }
-})
-const color_class = ['low', 'mid', 'high'][task.priority]
+const priorityText = ['一般', '重要', '紧急'][task.priority]
+const colorClass = ['low', 'mid', 'high'][task.priority]
 const toggleCompleted = () => {
     task.completed = !task.completed
     editTask(task.id, task)
@@ -21,8 +13,11 @@ const toggleCompleted = () => {
 </script>
 
 <template>
-    <div class="task" :class="color_class" @click.stop="$router.push({name: 'edit', params: {id: task.id}})">
-        <div class="task-priority">{{ priority }}</div>
+    <div class="task" 
+        :class="colorClass" 
+        @click.stop="$router.push({name: 'edit', params: {id: task.id}})"
+    >
+        <div class="task-priority">{{ priorityText }}</div>
         <div class="status" 
             :class="{completed: task.completed}"
             @click.stop="toggleCompleted"

@@ -10,7 +10,6 @@ import useEditTask from './useEditTask'
 const route = useRoute()
 const router = useRouter()
 const id = route.params.id
-const options = reactive(['一般', '重要', '紧急'])
 const {task, selectCallback, updateTask, deleteTask} = useEditTask(id)
 
 const edit_callback = () => {
@@ -33,7 +32,8 @@ const delete_callback = () => {
         </div>
         <div id="fields-container">
             <TextField name="任务名称" :task="task" />
-            <TypeField :options="options" 
+            <TypeField 
+                :options="['一般', '重要', '紧急']" 
                 :select="selectCallback" 
                 :default-select="task.priority" 
                 title="任务类型"

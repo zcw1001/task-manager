@@ -6,7 +6,7 @@ const {select, options, defaultSelect} = defineProps({
     options: Array,
     defaultSelect: Number
 })
-const selected = ref(parseInt(defaultSelect))
+const selected = ref(defaultSelect)
 watchEffect(() => {
     select(selected.value)
 })

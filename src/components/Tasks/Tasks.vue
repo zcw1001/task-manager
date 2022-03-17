@@ -9,7 +9,6 @@ import NoTask from './NoTask.vue'
 import useFilteredTasks from './useFilteredTasks'
 
 const defaultFilter = getDefaultFilter();
-const options = reactive(['全部', '未完成', '已完成'])
 const {tasks, filter} = useFilteredTasks()
 </script>
 
@@ -19,7 +18,11 @@ const {tasks, filter} = useFilteredTasks()
             <Header />
         </div>
         <div id="options-container">
-            <Options :options="options" :select="filter" :default-select="defaultFilter" />
+            <Options 
+                :options="['全部', '未完成', '已完成']" 
+                :select="filter" 
+                :default-select="defaultFilter" 
+            />
         </div>
         <div id="task-list-container">
             <Task v-for="(task, i) in tasks" :task="task" :key="task.name" />

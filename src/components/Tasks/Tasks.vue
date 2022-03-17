@@ -1,12 +1,11 @@
 <script setup>
-import {reactive} from 'vue'
-import {getDefaultFilter} from '@/apis/tasks'
 import Header from './Header.vue'
 import Task from './Task.vue'
 import Options from '@/components/common/Options.vue'
 import AddButton from './AddButton.vue'
 import NoTask from './NoTask.vue'
 import useFilteredTasks from './useFilteredTasks'
+import {getDefaultFilter} from '@/apis/tasks'
 
 const defaultFilter = getDefaultFilter();
 const {tasks, filter} = useFilteredTasks()

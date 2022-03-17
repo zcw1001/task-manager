@@ -1,5 +1,4 @@
 <script setup>
-import { reactive } from 'vue'
 import {useRouter} from 'vue-router'
 import Header from '../Header.vue'
 import TextField from '../TextField.vue'
@@ -7,10 +6,9 @@ import TypeField from '../TypeField.vue'
 import Button from '../Button.vue'
 import useAddTask from './useAddTask'
 
-const options = reactive(['一般', '重要', '紧急'])
 const {task, selectCallback, addTask} = useAddTask()
 const router = useRouter()
-const add_callback = () => {
+const addCallback = () => {
     // form validation
     if (task.name) {
         addTask()
@@ -26,14 +24,15 @@ const add_callback = () => {
         </div>
         <div id="fields-container">
             <TextField name="任务名称" :task="task" />
-            <TypeField :options="options" 
+            <TypeField 
+                :options="['一般', '重要', '紧急']" 
                 :select="selectCallback" 
                 :default-select="0" 
                 title="任务类型"
             />
         </div>
         <div id="action-container">
-            <Button :action="add_callback" name="添加" type="normal" />
+            <Button :action="addCallback" name="添加" type="normal" />
         </div>
     </form>
 </template>

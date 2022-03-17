@@ -1,5 +1,4 @@
 <script setup>
-import { reactive } from 'vue'
 import {useRoute, useRouter} from 'vue-router'
 import Header from '../Header.vue'
 import TextField from '../TextField.vue'
@@ -12,14 +11,14 @@ const router = useRouter()
 const id = route.params.id
 const {task, selectCallback, updateTask, deleteTask} = useEditTask(id)
 
-const edit_callback = () => {
+const editCallback = () => {
     // form validation
     if (task.name) {
         updateTask()
         router.push({name: 'tasks'})
     }
 }
-const delete_callback = () => {
+const deleteCallback = () => {
     deleteTask()
     router.push({name: 'tasks'})
 }
@@ -40,8 +39,8 @@ const delete_callback = () => {
             />
         </div>
         <div id="action-container">
-            <Button :action="edit_callback" name="确定" type="normal" />
-            <Button :action="delete_callback" name="删除" type="important" />
+            <Button :action="editCallback" name="确定" type="normal" />
+            <Button :action="deleteCallback" name="删除" type="important" />
         </div>
     </form>
 </template>
